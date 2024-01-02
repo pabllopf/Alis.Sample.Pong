@@ -8,7 +8,7 @@ on:
       
 jobs:
   
-  Create_Packages:
+  Build_And_Deploy:
     runs-on: macos-latest
     steps:
       - name: Checkout repository
