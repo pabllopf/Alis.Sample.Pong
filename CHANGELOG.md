@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.0.5] - 2024-01-02
+### :bug: Bug Fixes
+- [`bd3d7bc`](https://github.com/pabllopf/Alis.Sample.Pong/commit/bd3d7bc3c1a9a2cfae5fc1ce52445ecf69879374) - add original file of banner *(commit by [@pabllopf](https://github.com/pabllopf))*
+
+
 ## [v0.0.4] - 2024-01-02
 ### :bug: Bug Fixes
 - [`db59dba`](https://github.com/pabllopf/Alis.Sample.Pong/commit/db59dba1caa6b25a45d27877436247273b147e91) - the docs folder *(commit by [@pabllopf](https://github.com/pabllopf))*
@@ -31,3 +36,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.2]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.1...v0.0.2
 [v0.0.3]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.2...v0.0.3
 [v0.0.4]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.3...v0.0.4
+[v0.0.5]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.4...v0.0.5
