@@ -86,6 +86,12 @@ jobs:
       - name: git config user.email github-actions@github.com
         run: git config --global user.email "${{ secrets.USER_EMAIL }}"
 
+      - name: git config user.name
+        run: git config user.name
+
+      - name: git config user.email
+        run: git config user.email
+
       - name: Find common ancestor
         run: git merge-base --fork-point origin/master
 
