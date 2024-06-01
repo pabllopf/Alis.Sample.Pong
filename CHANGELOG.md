@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.0.9] - 2024-06-01
+### :bug: Bug Fixes
+- [`38c9fc4`](https://github.com/pabllopf/Alis.Sample.Pong/commit/38c9fc42fc1db18bf9281a7591af9e37798e58f0) - change the spaces *(commit by [@pabllopf](https://github.com/pabllopf))*
+
+
 ## [v0.0.8] - 2024-01-02
 ### :bug: Bug Fixes
 - [`417fda6`](https://github.com/pabllopf/Alis.Sample.Pong/commit/417fda6503859e39f87fad3feaec1ebd45093a33) - color mode to render the pong game *(commit by [@pabllopf](https://github.com/pabllopf))*
@@ -55,3 +60,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.6]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.5...v0.0.6
 [v0.0.7]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.6...v0.0.7
 [v0.0.8]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.7...v0.0.8
+[v0.0.9]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.8...v0.0.9
