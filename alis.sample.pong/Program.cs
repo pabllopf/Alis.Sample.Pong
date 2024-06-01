@@ -5,9 +5,9 @@
 //                              ░█─░█ ░█▄▄█ ▄█▄ ░█▄▄▄█
 // 
 //  --------------------------------------------------------------------------
-//  File: Program.cs
+//  File:Program.cs
 // 
-//  Author: Pablo Perdomo Falcón
+//  Author:Pablo Perdomo Falcón
 //  Web:https://www.pabllopf.dev/
 // 
 //  Copyright (c) 2021 GNU General Public License v3.0
@@ -27,15 +27,13 @@
 // 
 //  --------------------------------------------------------------------------
 
-using Alis.Core.Aspect.Data;
 using Alis.Core.Aspect.Data.Resource;
-using Alis.Core.Aspect.Logging;
 using Alis.Core.Aspect.Math.Definition;
+using Alis.Core.Ecs;
 using Alis.Core.Ecs.Component.Audio;
 using Alis.Core.Ecs.Component.Collider;
 using Alis.Core.Ecs.Component.Render;
-using Alis.Core.Ecs.Entity.GameObject;
-using Alis.Core.Ecs.Entity.Scene;
+using Alis.Core.Ecs.Entity;
 using Alis.Core.Physic.Dynamics;
 
 namespace Alis.Sample.Pong
@@ -59,16 +57,14 @@ namespace Alis.Sample.Pong
                         .Author("Pablo Perdomo Falcón")
                         .Description("Pong game")
                         .License("GNU General Public License v3.0")
-                        .Icon(AssetManager.Find("app.png"))
-                        .Build())
-                    .Profile(profile=> profile
-                        .LogLevel(LogLevel.Critical)
+                        .Icon("app.bmp")
                         .Build())
                     .Audio(audio => audio
                         .Build())
                     .Graphic(graphic => graphic
                         .Window(window => window
                             .Resolution(1024, 640)
+                            .IsResizable(false)
                             .Background(Color.Black)
                             .Build())
                         .Build())
@@ -80,10 +76,16 @@ namespace Alis.Sample.Pong
                     .Build())
                 .World(sceneManager => sceneManager
                     .Add<Scene>(gameScene => gameScene
-                        .Add<GameObject>(cameraObj => cameraObj
+                        .Add<GameObject>(mainCamera => mainCamera
                             .Name("Camera")
+                            .WithTag("Camera")
+                            .Transform(position => position
+                                .Position(512, 320)
+                                .Build())
                             .AddComponent<Camera>(camera => camera
                                 .Builder()
+                                .Resolution(1024, 640)
+                                .BackgroundColor(Color.Black)
                                 .Build())
                             .Build())
                         .Add<GameObject>(soundTrack => soundTrack
@@ -92,7 +94,7 @@ namespace Alis.Sample.Pong
                                 .Builder()
                                 .PlayOnAwake(true)
                                 .SetAudioClip(audioClip => audioClip
-                                    .FilePath(AssetManager.Find("soundtrack.wav"))
+                                    .FilePath("soundtrack.wav")
                                     .Volume(100.0f)
                                     .Build())
                                 .Build())
@@ -116,7 +118,6 @@ namespace Alis.Sample.Pong
                                 .Mass(10.0f)
                                 .Restitution(1.0f)
                                 .Friction(0f)
-                                .Density(0.5f)
                                 .FixedRotation(true)
                                 .GravityScale(0.0f)
                                 .Build())
@@ -141,7 +142,6 @@ namespace Alis.Sample.Pong
                                 .Mass(10.0f)
                                 .Restitution(1.0f)
                                 .Friction(0f)
-                                .Density(1.0f)
                                 .FixedRotation(true)
                                 .GravityScale(0.0f)
                                 .Build())
@@ -163,11 +163,10 @@ namespace Alis.Sample.Pong
                                 .Size(35, 35)
                                 .Rotation(0.0f)
                                 .RelativePosition(0, 0)
-                                .LinearVelocity(-10, -5)
+                                .LinearVelocity(-5.5f, -5)
                                 .Mass(10.0f)
                                 .Restitution(1.0f)
                                 .Friction(0f)
-                                .Density(0.5f)
                                 .FixedRotation(true)
                                 .GravityScale(0.0f)
                                 .Build())
@@ -189,7 +188,6 @@ namespace Alis.Sample.Pong
                                 .Mass(10.0f)
                                 .Restitution(0.0f)
                                 .Friction(0.1f)
-                                .Density(0.5f)
                                 .FixedRotation(true)
                                 .GravityScale(0.0f)
                                 .Build())
@@ -211,7 +209,6 @@ namespace Alis.Sample.Pong
                                 .Mass(10.0f)
                                 .Restitution(0.0f)
                                 .Friction(0.1f)
-                                .Density(0.5f)
                                 .FixedRotation(true)
                                 .GravityScale(0.0f)
                                 .Build())
@@ -233,7 +230,6 @@ namespace Alis.Sample.Pong
                                 .Mass(10.0f)
                                 .Restitution(0.0f)
                                 .Friction(0.1f)
-                                .Density(0.5f)
                                 .FixedRotation(true)
                                 .GravityScale(0.0f)
                                 .Build())
@@ -255,13 +251,13 @@ namespace Alis.Sample.Pong
                                 .Mass(10.0f)
                                 .Restitution(0.0f)
                                 .Friction(0.1f)
-                                .Density(0.5f)
                                 .FixedRotation(true)
                                 .GravityScale(0.0f)
                                 .Build())
                             .Build())
                         .Build())
                     .Build())
+                .Build()
                 .Run();
         }
     }
