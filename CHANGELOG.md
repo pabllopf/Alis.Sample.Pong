@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.0] - 2024-07-20
+### :sparkles: New Features
+- [`fe91093`](https://github.com/pabllopf/Alis.Sample.Pong/commit/fe910930f5457972090cf72bde2a1cf734e3be65) - new builds of cross-platform *(commit by [@pabllopf](https://github.com/pabllopf))*
+
+### :bug: Bug Fixes
+- [`df2d7a2`](https://github.com/pabllopf/Alis.Sample.Pong/commit/df2d7a26b3b4e34c38994b90d9d645a3f8d3f578) - to .net8.0 *(commit by [@pabllopf](https://github.com/pabllopf))*
+
+
 ## [v0.0.9] - 2024-06-01
 ### :bug: Bug Fixes
 - [`38c9fc4`](https://github.com/pabllopf/Alis.Sample.Pong/commit/38c9fc42fc1db18bf9281a7591af9e37798e58f0) - change the spaces *(commit by [@pabllopf](https://github.com/pabllopf))*
@@ -61,3 +69,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.7]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.6...v0.0.7
 [v0.0.8]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.7...v0.0.8
 [v0.0.9]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.8...v0.0.9
+[v0.1.0]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.9...v0.1.0
