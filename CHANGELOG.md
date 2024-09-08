@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.1] - 2024-09-08
+### :bug: Bug Fixes
+- [`524fb18`](https://github.com/pabllopf/Alis.Sample.Pong/commit/524fb1893d1384a97d8efc324b24ad0f6ca3e254) - names *(commit by [@pabllopf](https://github.com/pabllopf))*
+
+
 ## [v0.1.0] - 2024-07-20
 ### :sparkles: New Features
 - [`fe91093`](https://github.com/pabllopf/Alis.Sample.Pong/commit/fe910930f5457972090cf72bde2a1cf734e3be65) - new builds of cross-platform *(commit by [@pabllopf](https://github.com/pabllopf))*
@@ -70,3 +75,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.8]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.7...v0.0.8
 [v0.0.9]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.8...v0.0.9
 [v0.1.0]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.0.9...v0.1.0
+[v0.1.1]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.1.0...v0.1.1
