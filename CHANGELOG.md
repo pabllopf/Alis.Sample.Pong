@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.5] - 2025-02-02
+### :sparkles: New Features
+- [`febd687`](https://github.com/pabllopf/Alis.Sample.Pong/commit/febd687957f44f8d7c22b8be71f6c97d688c9467) - dll reduce size *(commit by [@pabllopf](https://github.com/pabllopf))*
+
+
 ## [v0.1.4] - 2025-01-07
 ### :bug: Bug Fixes
 - [`4416af7`](https://github.com/pabllopf/Alis.Sample.Pong/commit/4416af70bafd0e1fa217c79ef5cf977e4af37965) - update readme file *(commit by [@pabllopf](https://github.com/pabllopf))*
@@ -94,3 +99,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.1.2]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.1.1...v0.1.2
 [v0.1.3]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.1.2...v0.1.3
 [v0.1.4]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.1.3...v0.1.4
+[v0.1.5]: https://github.com/pabllopf/Alis.Sample.Pong/compare/v0.1.4...v0.1.5
