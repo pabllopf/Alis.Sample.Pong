@@ -16,7 +16,6 @@
     <ItemGroup>
         <PackageReference Include="Alis" Version="*" />
     </ItemGroup>
-
     
     <PropertyGroup Condition="$(Configuration) == 'Debug'">
         <Optimize>true</Optimize>
