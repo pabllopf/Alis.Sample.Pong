@@ -28,7 +28,6 @@
 //  --------------------------------------------------------------------------
 
 using Alis.Core.Aspect.Math.Definition;
-using Alis.Core.Ecs;
 using Alis.Core.Ecs.Component.Audio;
 using Alis.Core.Ecs.Component.Collider;
 using Alis.Core.Ecs.Component.Render;
@@ -62,11 +61,7 @@ namespace Alis.Sample.Pong
                     .Audio(audio => audio
                         .Build())
                     .Graphic(graphic => graphic
-                        .Window(window => window
-                            .Resolution(1024, 640)
-                            .IsResizable(false)
-                            .Background(Color.Black)
-                            .Build())
+                        .Resolution(1024, 640)
                         .Build())
                     .Physic(physic => physic
                         .Gravity(0.0f, -9.8f)
