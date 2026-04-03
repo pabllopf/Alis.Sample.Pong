@@ -27,18 +27,15 @@
 // 
 //  --------------------------------------------------------------------------
 
-using Alis.Core.Aspect.Data.Mapping;
-using Alis.Core.Aspect.Logging;
-using Alis.Core.Aspect.Math.Vector;
-using Alis.Core.Ecs.Component;
-using Alis.Core.Ecs.Component.Collider;
+using Alis.Core.Aspect.Fluent.Components;
+using Alis.Core.Ecs.Components.Collider;
 
 namespace Alis.Sample.Pong
 {
     /// <summary>
     ///     The player controller class
     /// </summary>
-    public class PlayerController : AComponent
+    public class PlayerController :  IOnUpdate
     {
         /// <summary>
         ///     The box collider
@@ -61,96 +58,10 @@ namespace Alis.Sample.Pong
         /// </summary>
         public int PlayerId { get; set; }
 
-        /// <summary>
-        ///     Starts this instance
-        /// </summary>
-        public override void OnStart() => boxCollider = GameObject.Get<BoxCollider>();
-
-        /// <summary>
-        ///     Updates this instance
-        /// </summary>
-        public override void OnUpdate() => Logger.Trace();
-
-        /// <summary>
-        ///     Ons the release key using the specified key
-        /// </summary>
-        /// <param name="key">The key</param>
-        public override void OnReleaseKey(Keys key)
+        
+        public void OnUpdate(IGameObject self)
         {
-            Vector2F velocity = boxCollider.Body.LinearVelocity;
-            switch (PlayerId)
-            {
-                case 1:
-                    switch (key)
-                    {
-                        case Keys.W:
-                            velocity = new Vector2F(velocity.X, 0);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            return;
-                        case Keys.S:
-                            velocity = new Vector2F(velocity.X, 0);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            break;
-                    }
-
-                    break;
-                case 2:
-                    switch (key)
-                    {
-                        case Keys.Up:
-                            velocity = new Vector2F(velocity.X, 0);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            return;
-                        case Keys.Down:
-                            velocity = new Vector2F(velocity.X, 0);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            break;
-                    }
-
-                    break;
-            }
-        }
-
-
-        /// <summary>
-        ///     Ons the press down key using the specified key
-        /// </summary>
-        /// <param name="key">The key</param>
-        public override void OnPressDownKey(Keys key)
-        {
-            Vector2F velocity = boxCollider.Body.LinearVelocity;
-
-            switch (PlayerId)
-            {
-                case 1:
-                    switch (key)
-                    {
-                        case Keys.W:
-                            velocity = new Vector2F(velocity.X, 3);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            return;
-                        case Keys.S:
-                            velocity = new Vector2F(velocity.X, -3);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            break;
-                    }
-
-                    break;
-                case 2:
-                    switch (key)
-                    {
-                        case Keys.Up:
-                            velocity = new Vector2F(velocity.X, 3);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            return;
-                        case Keys.Down:
-                            velocity = new Vector2F(velocity.X, -3);
-                            boxCollider.Body.LinearVelocity = velocity;
-                            break;
-                    }
-
-                    break;
-            }
+            
         }
     }
 }
